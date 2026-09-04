@@ -1,0 +1,19 @@
+server:
+  port: 9411
+
+spring:
+  application:
+    name: zipkin-server
+  main:
+    web-application-type: none # In-memory span storage - fine for local development/demo.
+    allow-bean-definition-overriding: true # Set STORAGE_TYPE=elasticsearch (or mysql, cassandra3) with the matching
+# env vars for persistent storage in a real deployment.
+zipkin:
+  storage:
+    type: mem
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
