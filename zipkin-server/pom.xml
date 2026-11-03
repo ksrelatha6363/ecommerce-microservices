@@ -1,45 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-	<parent>
-		<groupId>com.ecommerce</groupId>
-		<artifactId>ecommerce-microservices</artifactId>
-		<version>1.0.0</version>
-	</parent>
+    <modelVersion>4.0.0</modelVersion>
 
-	<artifactId>zipkin-server</artifactId>
-	<name>zipkin-server</name>
-	<description>Embedded Zipkin server for collecting and visualizing
-		distributed traces</description>
+    <!-- Parent Project -->
+    <parent>
+        <groupId>com.ecommerce</groupId>
+        <artifactId>ecommerce-microservices</artifactId>
+        <version>1.0.0</version>
+    </parent>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+    <!-- Project Information -->
+    <artifactId>zipkin-server</artifactId>
 
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-web</artifactId>
-			</dependency>
+    <name>zipkin-server</name>
 
-			<dependency>
-				<groupId>io.zipkin</groupId>
-				<artifactId>zipkin-server</artifactId>
-				<version>3.4.0</version>
-			</dependency>
-	</dependencies>
+    <description>
+        Embedded Zipkin server for collecting and visualizing
+        distributed traces
+    </description>
 
-	<build>
-		<finalName>zipkin-server</finalName>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+    <!-- Dependencies -->
+    <dependencies>
+
+        <!-- Spring Boot Web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Zipkin Server -->
+        <dependency>
+            <groupId>io.zipkin</groupId>
+            <artifactId>zipkin-server</artifactId>
+            <version>3.4.0</version>
+        </dependency>
+
+    </dependencies>
+
+    <!-- Build Configuration -->
+    <build>
+
+        <finalName>zipkin-server</finalName>
+
+        <plugins>
+
+            <!-- Spring Boot Maven Plugin -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+        </plugins>
+
+    </build>
+
 </project>
